@@ -1,7 +1,7 @@
 import './scss/index.scss';
 
 const person = {
-    name: "John",
+       name: "John",
     age: 34,
     city: 'minsk'
 };
