@@ -10,13 +10,12 @@
     "arrow-parens": "off",
     "indent": "off",
     "comma-dangle": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-unused-vars": "warn"
   },
   "extends": [
-    "prettier",
-    "google"
-  ],
-  "plugins": [
+    "eslint:recommended",
     "prettier"
-  ]
+  ],
+  "plugins": ["prettier"]
 }
