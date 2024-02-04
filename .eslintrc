@@ -7,7 +7,7 @@
   },
   "rules": {
     "semi": "off",
-    "arrow-parens": "off",
+//    "arrow-parens": "off",
     "indent": "off",
     "comma-dangle": "off",
     "linebreak-style": "off",
@@ -15,7 +15,8 @@
   },
   "extends": [
     "eslint:recommended",
-    "prettier"
+    "google",
+//    "prettier"
   ],
-  "plugins": ["prettier"]
+//  "plugins": ["prettier"]
 }

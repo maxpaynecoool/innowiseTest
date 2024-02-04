@@ -23,6 +23,7 @@ module.exports = {
     },
     devtool: isDev ? 'source-map' : false,
     devServer: {
+        watchFiles: ["src/*.html"],
         port: 3000,
         hot: isDev
     },
@@ -35,8 +36,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.scss$/i,
                 use: [
+                    'style-loader',
                     'css-loader',
                     'sass-loader'
                 ],

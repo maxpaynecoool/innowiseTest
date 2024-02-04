@@ -1,12 +1,5 @@
+import './scss/index.scss'
 
-
-const person = {
-    ewfwefewfname: "John",
-    age: 34,
-    city: "minsk"
-
-
-
-};
-
-console.log('Slayingrgrgrg');
+const people = {
+    name: 'John',
+}
