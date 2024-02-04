@@ -40,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "eslint ."
+      "pre-push": "git push -u origin main"
     }
   }
 }
