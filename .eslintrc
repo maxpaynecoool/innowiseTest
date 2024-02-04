@@ -10,7 +10,12 @@
     "arrow-parens": "off",
     "indent": "off",
     "comma-dangle": "off"
-
   },
-  "extends": ["eslint:recommended", "google"]
+  "extends": [
+    "prettier",
+    "google"
+  ],
+  "plugins": [
+    "prettier"
+  ]
 }
