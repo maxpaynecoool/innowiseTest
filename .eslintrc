@@ -5,18 +5,15 @@
     "browser": true,
     "node": true
   },
+  "extends": [
+    "airbnb/base"
+    //    "prettier"
+  ],
   "rules": {
     "semi": "off",
-//    "arrow-parens": "off",
-    "indent": "off",
-    "comma-dangle": "off",
-    "linebreak-style": "off",
-    "no-unused-vars": "error"
-  },
-  "extends": [
-    "eslint:recommended",
-    "google",
-//    "prettier"
-  ],
-//  "plugins": ["prettier"]
+    "no-console": "warn",
+    "eol-last": "off",
+    "indent": "off"
+  }
+  //  "plugins": ["prettier"]
 }
