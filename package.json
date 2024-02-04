@@ -7,21 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "lint": "eslint --debug src/",
-    "lint:write": "eslint --debug src/ --fix",
-    "prettier": "prettier --write src/**/*.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint .",
-      "pre-push": "eslint ."
-
+      "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.(js)": [
-      "npm run lint:write",
-      "git add"
+    "*.js": [
+      "eslint ."
     ]
   },
   "repository": {

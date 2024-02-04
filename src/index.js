@@ -1,9 +1,9 @@
 import './scss/index.scss';
 
 const person = {
-       name: "John",
+       ewfwefewfname: "John",
     age: 34,
-    city: 'minsk'
+    city: "minsk"
 };
 
 console.log('Slaying..ноауауауауау6о6о  .');
