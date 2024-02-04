@@ -2,4 +2,4 @@ import './scss/index.scss'
 
 
 
-console.log('Slaying...')
+console.log('Slaying..  .')
