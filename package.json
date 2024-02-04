@@ -7,8 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack-dev-server --open --mode production",
-    "precommit": "lint-staged",
-    "eslint": "node_modules/.bin/eslint src/"
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/",
+    "prettier": "prettier --write src/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js)": [
+      "npm run lint:write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -43,18 +55,5 @@
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "git push origin -u main"
-    }
-  },
-  "lint-staged": {
-    "*.(js)": [
-      "node_modules/.bin/eslint --max-warnings=0",
-      "prettier --write",
-      "git add"
-    ]
   }
 }
