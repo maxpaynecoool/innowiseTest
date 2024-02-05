@@ -3,7 +3,7 @@ import './scss/index.scss';
 const a = 1;
 
 function foo(name) {
-    const ln = name;
+        const ln = name;
 }
 
 const x = 200;
