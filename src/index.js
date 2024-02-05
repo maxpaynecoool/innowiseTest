@@ -1,19 +1,19 @@
-import './scss/index.scss'
+import './scss/index.scss';
 
-const a = 1
+const a = 1;
 
 function foo(name) {
-    const ln = name
+    const ln = name;
 }
 
-const x = 200
+const x = 200;
 
-console.log(x)
+console.log(x);
 
 const people = {
-    name: 'John',
-}
+    name: 'John'
+};
 
 const people2 = {
-    name: 'John',
-}
+    name: 'John'
+};
