@@ -3,5 +3,7 @@
   "tabWidth": 4,
   "singleQuote": false,
   "semi": false,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "no-restricted-imports": false,
+  "no-console": true
 }

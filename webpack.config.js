@@ -18,19 +18,17 @@ module.exports = {
         extensions: ['.js'],
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@core': path.resolve(__dirname, 'src/core')
         }
     },
     devtool: isDev ? 'source-map' : false,
     devServer: {
         watchFiles: ["src/*.html"],
-        port: 3000,
-        hot: isDev
+        port: 3000
     },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: './index.html',
         }),
     ],
     module: {

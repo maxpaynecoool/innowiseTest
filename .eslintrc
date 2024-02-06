@@ -13,7 +13,8 @@
   ],
   "rules": {
     "prettier-prettier": [
-      "warn"
-    ]
+      "error"
+    ],
+    "no-restricted-imports": "off"
   }
 }
