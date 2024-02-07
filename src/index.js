@@ -8,7 +8,7 @@ theme.addEventListener('click', () => {
     const extraOperators = document.querySelectorAll('.defaultThemeExtra');
     const expressions = document.querySelectorAll('.defaultThemeExpression')
     document.querySelector('.input-field').classList.toggle('lightThemeInput');
-    const themeButton = document.querySelector('.themeIcon').classList.toggle('rotate')
+    document.querySelector('.themeIcon').classList.toggle('rotate')
 
     for (let o of operands) {
         o.classList.toggle('lightTheme');

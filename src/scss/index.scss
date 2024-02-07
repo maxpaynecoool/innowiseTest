@@ -16,7 +16,7 @@
 
 #theme-button {
   background: none;
-  padding: 0
+  padding: 0;
 }
 
 .rotate {
@@ -31,6 +31,7 @@
   height: auto;
   box-shadow: 0px 11px 21px 6px rgba(34, 60, 80, 0.24);
   border-radius: 20px;
+  transition-duration: 0.3s;
 }
 
 .input-field {
@@ -43,7 +44,11 @@
   border: none;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
 
+.lightThemeInput {
+  background-color: #c4c4c4;
+  color: #393939;
 }
 
 
@@ -116,8 +121,4 @@ button:active {
   color: #393939;
 }
 
-.lightThemeInput {
-  background-color: #c4c4c4;
-  color: #393939;
-}
 
