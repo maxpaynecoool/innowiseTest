@@ -13,6 +13,8 @@ function applyOperator(operand1, operand2, operator) {
             return 'Деление на ноль';
         case '%':
             return (operand1 * operand2) / 100;
+            case '+/-':
+                return -operand1
         default:
             return 'Неизвестный оператор';
     }

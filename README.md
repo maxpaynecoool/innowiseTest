@@ -1,8 +1,10 @@
 # Calculator on Pure JavaScript
 
-![Screenshot](https://drive.google.com/file/d/1LcZuucf7N7J-T8IBdInt2_icIqy3EMyG/view?usp=drive_link)
+![Screenshot](./src/images/image_2024-02-07_14-37-08.png)
 
-## Getting Started ✔️
+Task: https://drive.google.com/file/d/1tt4iL5QUoPzmTDjXHDrm8TvmZ8Qf61P-/view?usp=sharing
+
+## How to run the app 🚀️
 
 ---
 
