@@ -2,7 +2,7 @@
 
 ![Screenshot](./src/images/image_2024-02-07_14-37-08.png)
 
-Task: https://drive.google.com/file/d/1tt4iL5QUoPzmTDjXHDrm8TvmZ8Qf61P-/view?usp=sharing
+## [Task](https://drive.google.com/file/d/1tt4iL5QUoPzmTDjXHDrm8TvmZ8Qf61P-/view?usp=sharing) ___(link)___
 
 ## How to run the app 🚀️
 
