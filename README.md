@@ -6,8 +6,6 @@
 
 ## How to run the app 🚀️
 
----
-
 1. Clone the repository to your local machine:
 
 ```
@@ -21,8 +19,6 @@ npm install
 ```
 
 ## Available Scripts 💻
-
----
 
 1. Runs the app in the development mode.
 It will open automatically on http://localhost:3000 to view it in the browser:

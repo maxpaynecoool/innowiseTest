@@ -1,76 +1,76 @@
-function applyOperator(operand1, operand2, operator) {
-    switch (operator) {
-        case '+':
-            return operand1 + operand2;
-        case '-':
-            return operand1 - operand2;
-        case '*':
-            return operand1 * operand2;
-        case '/':
-            if (operand2 !== 0) {
-                return operand1 / operand2;
-            }
-            return 'Деление на ноль';
-        case '%':
-            return (operand1 * operand2) / 100;
-            case '+/-':
-                return -operand1
-        default:
-            return 'Неизвестный оператор';
-    }
-}
+const applyOperator = (operand1, operand2, operator) => {
+  switch (operator) {
+    case '+':
+      return operand1 + operand2;
+    case '-':
+      return operand1 - operand2;
+    case '*':
+      return operand1 * operand2;
+    case '/':
+      if (operand2 !== 0) {
+        return operand1 / operand2;
+      }
+      return 'Деление на ноль';
+    case '%':
+      return (operand1 * operand2) / 100;
+    default:
+      return 'Неизвестный оператор';
+  }
+};
 
 export function evaluateExpression(expression) {
-    const operators = ['+', '-', '*', '/', '%'];
-    const operatorArray = [];
-    const operandArray = [];
-    let operand = '';
-    let isNegative = false;
+  const operators = ['+', '-', '*', '/', '%'];
+  const operatorStack = [];
+  const numberStack = [];
+  let number = '';
+  let isNegative = false;
 
-    for (let i = 0; i < expression.length; i++) {
-        const char = expression[i];
+  for (let i = 0; i < expression.length; i++) {
+    const char = expression[i];
 
-        if (!isNaN(char) || char === '.') {
-            operand += char;
-        } else if (operators.includes(char)) {
-            if (operand !== '') {
-                operandArray.push(parseFloat(operand) * (isNegative ? -1 : 1));
-                operand = '';
-                isNegative = false;
-            }
+    if (!isNaN(char) || char === '.') {
+      number += char;
+    } else if (
+      char === '-' &&
+      (i === 0 || operators.includes(expression[i - 1]))
+    ) {
+      isNegative = true;
+    } else if (operators.includes(char)) {
+      if (number !== '') {
+        numberStack.push(parseFloat(number) * (isNegative ? -1 : 1));
+        number = '';
+        isNegative = false;
+      }
 
-            while (
-                operatorArray.length > 0 &&
-                operators.indexOf(operatorArray[operatorArray.length - 1]) >= operators.indexOf(char)
-                ) {
-                const operator = operatorArray.pop();
-                const operand2 = operandArray.pop();
-                const operand1 = operandArray.pop();
-                const result = applyOperator(operand1, operand2, operator);
-                operandArray.push(result);
-            }
-
-            operatorArray.push(char);
-        } else if (char === '+/-' && operand === '') {
-            isNegative = !isNegative;
-        }
-    }
-
-    if (operand !== '') {
-        operandArray.push(parseFloat(operand) * (isNegative ? -1 : 1));
-    }
-
-    while (operatorArray.length > 0) {
-        const operator = operatorArray.pop();
-        const operand2 = operandArray.pop();
-        const operand1 = operandArray.pop();
+      while (
+        operatorStack.length > 0 &&
+        operators.indexOf(operatorStack[operatorStack.length - 1]) >=
+          operators.indexOf(char)
+      ) {
+        const operator = operatorStack.pop();
+        const operand2 = numberStack.pop();
+        const operand1 = numberStack.pop();
         const result = applyOperator(operand1, operand2, operator);
-        operandArray.push(result);
+        numberStack.push(result);
+      }
+      operatorStack.push(char);
     }
+  }
 
-    if (operandArray.length === 1) {
-        return operandArray[0];
-    }
-    throw 'Ошибка: некорректное выражение';
+  if (number !== '') {
+    numberStack.push(parseFloat(number) * (isNegative ? -1 : 1));
+  }
+
+  while (operatorStack.length > 0) {
+    const operator = operatorStack.pop();
+    const operand2 = numberStack.pop();
+    const operand1 = numberStack.pop();
+    const result = applyOperator(operand1, operand2, operator);
+    numberStack.push(result);
+  }
+
+  if (numberStack.length === 1) {
+    return numberStack[0];
+  }
+  return 'Ошибка: некорректное выражение';
 }
-

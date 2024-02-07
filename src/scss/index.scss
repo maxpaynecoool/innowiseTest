@@ -46,7 +46,7 @@
   border: none;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  overflow-x: visible;
+  overflow-x: scroll;
 }
 
 .lightThemeInput {
@@ -61,7 +61,6 @@
   gap: 1px;
   background-color: #535353;
   border-radius: 20px;
-
 }
 
 #zero {
@@ -74,6 +73,7 @@ button {
   padding: 20px;
   border: none;
   background-color: #7d7d7d;
+  cursor: pointer;
 }
 
 button:hover {

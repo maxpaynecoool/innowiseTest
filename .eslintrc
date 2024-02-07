@@ -5,16 +5,17 @@
     "node": true
   },
   "extends": [
-    "airbnb/base",
     "plugin:prettier/recommended"
   ],
   "plugins": [
     "prettier"
   ],
   "rules": {
-    "prettier-prettier": [
-      "error"
-    ],
-    "no-restricted-imports": "off"
+    "prettier/prettier": [
+      "warn"
+    ]
+  },
+  "parserOptions": {
+    "sourceType": "module"
   }
 }
