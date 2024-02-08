@@ -15,7 +15,7 @@ git clone https://github.com/maxpaynecoool/innowiseTest
 2. Install the required dependencies:
 
 ```
-npm run install
+npm install
 ```
 
 ## Available Scripts 💻
