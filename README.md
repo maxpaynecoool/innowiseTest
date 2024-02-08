@@ -55,5 +55,5 @@ npm run lint
 6. To fix ESlint-errors run this script:
 
 ```
-npm lint:fix
+npm run lint:fix
 ```
