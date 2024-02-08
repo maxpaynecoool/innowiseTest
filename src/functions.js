@@ -24,18 +24,24 @@ export function evaluateExpression(expression) {
   const numberStack = [];
   let number = '';
   let isNegative = false;
+  let lastCharWasOperator = false;
 
   for (let i = 0; i < expression.length; i++) {
     const char = expression[i];
 
     if (!isNaN(char) || char === '.') {
       number += char;
+      lastCharWasOperator = false;
     } else if (
       char === '-' &&
       (i === 0 || operators.includes(expression[i - 1]))
     ) {
       isNegative = true;
     } else if (operators.includes(char)) {
+      if (lastCharWasOperator) {
+        return 'Ошибка';
+      }
+      lastCharWasOperator = true;
       if (number !== '') {
         numberStack.push(parseFloat(number) * (isNegative ? -1 : 1));
         number = '';
