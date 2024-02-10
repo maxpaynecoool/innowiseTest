@@ -25,11 +25,19 @@ export function evaluateExpression(expression) {
   let number = '';
   let isNegative = false;
   let lastCharWasOperator = false;
+  let decimalPoint = false;
 
   for (let i = 0; i < expression.length; i++) {
     const char = expression[i];
 
-    if (!isNaN(char) || char === '.') {
+    if (!isNaN(char)) {
+      number += char;
+      lastCharWasOperator = false;
+    } else if (char === '.') {
+      if (decimalPoint) {
+        return 'Ошибка';
+      }
+      decimalPoint = true;
       number += char;
       lastCharWasOperator = false;
     } else if (
@@ -42,6 +50,7 @@ export function evaluateExpression(expression) {
         return 'Ошибка';
       }
       lastCharWasOperator = true;
+      decimalPoint = false;
       if (number !== '') {
         numberStack.push(parseFloat(number) * (isNegative ? -1 : 1));
         number = '';
