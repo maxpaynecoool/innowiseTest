@@ -28,8 +28,10 @@ const buttons = document.getElementById('buttons');
 
 const appendToExpression = (event) => {
   const value = event.target.textContent.trim();
-  if (value !== '=' && value !== 'AC' && value !== '+/-') {
-    return (expressionInput.value += value);
+  if (event.target.tagName !== 'DIV') {
+    if (value !== '=' && value !== 'AC' && value !== '+/-') {
+      return (expressionInput.value += value);
+    }
   }
 };
 
