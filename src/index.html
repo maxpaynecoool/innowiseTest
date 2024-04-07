@@ -1,89 +1,181 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Innowise Test Task</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>final</title>
 </head>
 <body>
 <div class="app">
-    <button id="theme-button">
-        <svg class="themeIcon" width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="ic_fluent_dark_theme_24_regular" fill="#212121" fill-rule="nonzero">
-                    <path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" id="🎨-Color">
+  <button id="theme-button">
+    <svg class="themeIcon" width="40px" height="40px" viewBox="0 0 24 24" version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_fluent_dark_theme_24_regular" fill="#212121" fill-rule="nonzero">
+          <path
+            d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z"
+            id="🎨-Color">
 
-                    </path>
-                </g>
-            </g>
-        </svg>
-    </button>
+          </path>
+        </g>
+      </g>
+    </svg>
+  </button>
 
-    <div class="calculator">
-        <input type="text" value="" id="expression" class="input-field" placeholder="0" disabled>
-        <div id="buttons" class="buttons">
-            <button id="clear" class="defaultThemeExtra">
-                AC
-            </button>
-            <button id="change" class="defaultThemeExtra">
-                +/-
-            </button>
-            <button id="percent" class="defaultThemeExtra">
-                %
-            </button>
-            <button id="division" class="defaultThemeExpression">
-                /
-            </button>
-            <button id="7" class="defaultTheme">
-                7
-            </button>
-            <button id="8" class="defaultTheme">
-                8
-            </button>
-            <button id="9" class="defaultTheme">
-                9
-            </button>
-            <button id="multiplication" class="defaultThemeExpression">
-                *
-            </button>
-            <button id="4" class="defaultTheme">
-                4
-            </button>
-            <button id="5" class="defaultTheme">
-                5
-            </button>
-            <button id="6" class="defaultTheme">
-                6
-            </button>
-            <button id="subtraction" class="defaultThemeExpression">
-                -
-            </button>
-            <button id="1" class="defaultTheme">
-                1
-            </button>
-            <button id="2" class="defaultTheme">
-                2
-            </button>
-            <button id="3" class="defaultTheme">
-                3
-            </button>
-            <button id="addition" class="defaultThemeExpression">
-                +
-            </button>
-            <button id="zero" class="defaultTheme">
-                0
-            </button>
-            <button id="point" class="defaultTheme">
-                .
-            </button>
-            <button id="result" class="defaultThemeExpression">
-                =
-            </button>
-        </div>
+  <div class="calculator">
+    <input type="text" value="" id="display" class="input-field" placeholder="0" disabled>
+    <div id="buttons" class="buttons">
+      <button class="defaultThemeExtra">
+        (
+      </button>
+      <button class="defaultThemeExtra">
+        )
+      </button>
+      <button id="memoryClear" class="defaultThemeExtra">
+        mc
+      </button>
+      <button id="memoryAdd" class="defaultThemeExtra">
+        m+
+      </button>
+      <button id="memorySubtract" class="defaultThemeExtra">
+        m-
+      </button>
+      <button id="mrButton" class="defaultThemeExtra">
+        mr
+      </button>
+      <button id="clear" class="defaultThemeExtra">
+        AC
+      </button>
+      <button id="changeSign" class="defaultThemeExtra">
+        +/-
+      </button>
+      <button id="percent" class="defaultThemeExtra" data-command="percent">
+        %
+      </button>
+      <button id="divide" class="defaultThemeExpression" data-command="divide">
+        /
+      </button>
+      <button class="defaultThemeExtra">
+        2<sup class="defaultThemeExtra">nd</sup>
+      </button>
+      <button class="defaultThemeExtra" id="square" data-command="square">
+        x<sup class="defaultThemeExtra">2</sup>
+      </button>
+      <button class="defaultThemeExtra" id="cube" data-command="cube">
+        x<sup class="defaultThemeExtra">3</sup>
+      </button>
+      <button class="defaultThemeExtra" id="pow" data-command="pow">
+        x<sup class="defaultThemeExtra">y</sup>
+      </button>
+      <button class="defaultThemeExtra">
+        e<sup class="defaultThemeExtra">x</sup>
+      </button>
+      <button class="defaultThemeExtra" id="tenpow" data-command="tenPow">
+        10<sup class="defaultThemeExtra">x</sup>
+      </button>
+      <button id="7" class="defaultTheme" data-number="7">
+        7
+      </button>
+      <button id="8" class="defaultTheme" data-number="8">
+        8
+      </button>
+      <button id="9" class="defaultTheme" data-number="9">
+        9
+      </button>
+      <button id="multiply" class="defaultThemeExpression" data-command="multiply">
+        *
+      </button>
+      <button class="defaultThemeExtra" id="reciprocal" data-command="reciprocal">
+        1/x
+      </button>
+      <button class="defaultThemeExtra" id="sqrt" data-command="sqrt">
+        √x
+      </button>
+      <button class="defaultThemeExtra" id="cbrt" data-command="cbrt">
+        <sup class="defaultThemeExtra">3</sup>√x
+      </button>
+      <button class="defaultThemeExtra" id="root" data-command="root">
+        <sup class="defaultThemeExtra">y</sup>√x
+      </button>
+      <button class="defaultThemeExtra">
+        ln
+      </button>
+      <button class="defaultThemeExtra">
+        log<sub class="defaultThemeExtra">10</sub>
+      </button>
+      <button id="4" class="defaultTheme" data-number="4">
+        4
+      </button>
+      <button id="5" class="defaultTheme" data-number="5">
+        5
+      </button>
+      <button id="6" class="defaultTheme" data-number="6">
+        6
+      </button>
+      <button id="subtract" class="defaultThemeExpression" data-command="subtract">
+        -
+      </button>
+      <button class="defaultThemeExtra" id="factorial" data-command="factorial">
+        x!
+      </button>
+      <button class="defaultThemeExtra">
+        sin
+      </button>
+      <button class="defaultThemeExtra">
+        cos
+      </button>
+      <button class="defaultThemeExtra">
+        tan
+      </button>
+      <button class="defaultThemeExtra">
+        e
+      </button>
+      <button class="defaultThemeExtra">
+        EE
+      </button>
+      <button id="1" class="defaultTheme" data-number="1">
+        1
+      </button>
+      <button id="2" class="defaultTheme" data-number="2">
+        2
+      </button>
+      <button id="3" class="defaultTheme" data-number="3">
+        3
+      </button>
+      <button id="add" class="defaultThemeExpression" data-command="add">
+        +
+      </button>
+      <button id="rad" class="defaultThemeExtra">
+        Rad
+      </button>
+      <button class="defaultThemeExtra">
+        sinh
+      </button>
+      <button class="defaultThemeExtra">
+        cosh
+      </button>
+      <button class="defaultThemeExtra">
+        tanh
+      </button>
+      <button class="defaultThemeExtra">
+        π
+      </button>
+      <button class="defaultThemeExtra">
+        Rand
+      </button>
+      <button id="zero" class="defaultTheme" data-number="0">
+        0
+      </button>
+      <button id="decimal-point" class="defaultTheme">
+        .
+      </button>
+      <button id="calculate" class="defaultThemeExpression">
+        =
+      </button>
     </div>
+  </div>
 </div>
-
 </body>
 </html>

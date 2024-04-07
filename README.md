@@ -1,9 +1,5 @@
 # Calculator on Pure JavaScript
 
-![Screenshot](./src/images/image_2024-02-07_23-47-08.png)
-
-## [Task](https://drive.google.com/file/d/1tt4iL5QUoPzmTDjXHDrm8TvmZ8Qf61P-/view?usp=sharing) ___(link)___
-
 ## How to run the app 🚀️
 
 1. Clone the repository to your local machine:
@@ -46,13 +42,20 @@ npm run build
 npm run deploy
 ```
 
-5. To check the code for ESlint-errors run this script:
+5. To test this app run this script
+
+```
+npm run test
+```
+
+
+6. To check the code for ESlint-errors run this script:
 
 ```
 npm run lint
 ```
 
-6. To fix ESlint-errors run this script:
+7. To fix ESlint-errors run this script:
 
 ```
 npm run lint:fix
